@@ -1,0 +1,101 @@
+@font-face {
+  font-family: clockicons;
+  src: url(font/clockicons/clockicons.eot#iefix) format('embedded-opentype'),url(font/clockicons/clockicons.woff2) format('woff2'),url(font/clockicons/clockicons.woff) format('woff'),url(font/clockicons/clockicons.ttf) format('truetype'),url(font/clockicons/clockicons.svg) format('svg');
+  font-weight: 400;
+  font-style: normal
+}
+
+@import url('https://fonts.googleapis.com/css?family=Concert+One|Courgette&display=swap');
+
+body {
+  background: url(img/background.jpg) no-repeat center top fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+main {
+  background-color: #fff;
+  width: 500px;
+  margin: 50px auto;
+  text-align: center;
+  padding: 20px;
+  @media screen and (max-width: 519px) {
+    width: 400px;
+    margin: 25px auto;
+  }
+  @media screen and (max-width: 419px) {
+    width: 350px;
+    margin: 15px auto;
+  }
+  @media screen and (max-width: 359px) {
+    width: 300px;
+    margin: 10px auto;
+    padding: 15px;
+  }
+
+  .title {
+    font-family: 'Concert One', cursive, 'Arial Black';
+    font-size: 20px;
+    @media screen and (max-width: 519px) {
+      font-size: 18px;
+    }
+  }
+
+  .big {
+    font-size: 30px;
+    color: #8BD306;
+    @media screen and (max-width: 519px) {
+      font-size: 28px;
+    }
+    @media screen and (max-width: 359px) {
+      font-size: 26px;
+    }
+  }
+
+  img.arrow {
+    width: 80px;
+    @media screen and (max-width: 519px) {
+     display: none;
+    }
+  }
+
+  img.emoji {
+    width: 30px;
+    @media screen and (max-width: 519px) {
+      width: 28px;
+    }
+  }
+
+  img.photo {
+    width: 450px;
+    margin: 10px 0;
+    @media screen and (max-width: 519px) {
+      width: 360px;
+    }
+    @media screen and (max-width: 419px) {
+      width: 310px;
+    }
+    @media screen and (max-width: 359px) {
+      width: 270px;
+    }
+  }
+
+  .message {
+    font-family: 'Courgette', cursive;
+    margin: 10px 0;
+  }
+
+  .clock {
+    font-family: clockicons, sans-serif;
+    font-size: 50px;
+    @media screen and (max-width: 359px) {
+      font-size: 43px;
+    }
+  }
+
+  .end {
+    font-family: serif;
+  }
+}

@@ -1,13 +1,46 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <title>Para mi linda gatita</title>
+
+    <meta name = "viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/favicon/touch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/touch-icon-ipad-retina.png">
+
+    <link rel="stylesheet" href="reset.min.css" type = "text/css">
+    <link rel="stylesheet" href="style.css" type = "text/css">
+
 </head>
 
 <body>
+    <main>
+        <p class="title">Mira a esta chica tan maravillosa, guapa y preciosa</p>
+        <img class="arrow" src="img/DownGreen.png" alt="arrow">
 
-<script>
-	alert('hello world');
-</script>
+        <img class="photo" src="img/linda.jpg" alt="linda">
 
+        <p class="title">Me encantaría darle un besito <img class="emoji" src="img/beso.png" alt="beso"> y felicitarla</p>
+        <p class="title big">¡¡¡FELIZ DÍA DE LA MUJER!!!</p>
+
+        <div class="message" id="message"></div>
+
+        <div class="clock" id="clock">
+            <span class="numbers" id="days">00</span> :
+            <span class="numbers" id="hours">00</span> :
+            <span class="numbers" id="minutes">00</span> :
+            <span class="numbers" id="seconds">00</span>
+        </div>
+
+        <p class="end" id="end">¡Y ahora a comer! ¡Que aproveche!</p>
+    </main>
+
+    <script src="jquery.min.js"></script>
+	<script defer src="script.min.js"></script>
 </body>
 </html>
