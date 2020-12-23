@@ -1,0 +1,559 @@
+@font-face {
+  font-family: 'Yanone Kaffeesatz';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/yanonekaffeesatz/v15/3y9I6aknfjLm_3lMKjiMgmUUYBs04aUXNxt9gW2LIftoqNWpcA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Yanone Kaffeesatz';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/yanonekaffeesatz/v15/3y9I6aknfjLm_3lMKjiMgmUUYBs04aUXNxt9gW2LIfto9tWpcA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Yanone Kaffeesatz';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/yanonekaffeesatz/v15/3y9I6aknfjLm_3lMKjiMgmUUYBs04aUXNxt9gW2LIftoxNWpcA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Fira Sans Extra Condensed';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/firasansextracondensed/v4/NaPKcYDaAO5dirw6IaFn7lPJFqXmS-M9Atn3wgda5fg.ttf) format('truetype');
+}
+body {
+  background: url(../img/inventoryBackground.jpg) no-repeat center top fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-weight: 400;
+  padding: 20px 50px 20px 50px;
+}
+@media screen and (max-width: 1280px) {
+  body {
+    zoom: 0.95;
+  }
+}
+@media screen and (max-width: 1215px) {
+  body {
+    zoom: 0.9;
+  }
+}
+@media screen and (max-width: 1140px) {
+  body {
+    zoom: 0.85;
+  }
+}
+@media screen and (max-width: 1140px) {
+  body {
+    zoom: 0.85;
+  }
+}
+@media screen and (max-width: 1080px) {
+  body {
+    zoom: 0.8;
+  }
+}
+.background {
+  z-index: 999;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.background:before {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+  display: block;
+  background-color: #000;
+  opacity: 0.7;
+}
+.background .message-block {
+  color: #A5A18F;
+  background: #0D0C0A;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 500px;
+  height: 400px;
+  border: 3px double #2B2622;
+  padding: 10px 15px 5px 15px;
+  font-family: 'Fira Sans Extra Condensed', sans-serif;
+}
+.background .message-block p.title {
+  text-align: center;
+  color: #5D4E32;
+  padding: 10px 0;
+}
+.background .message-block .img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.background .message-block .img div {
+  width: 200px;
+  height: 2px;
+}
+.background .message-block .img img {
+  display: block;
+  width: 40px;
+}
+.background .message-block .img .left-line {
+  background: linear-gradient(to left, #413a24 0%, transparent 100%);
+}
+.background .message-block .img .right-line {
+  background: linear-gradient(to right, #413a24 0%, transparent 100%);
+}
+.background .message-block p.text {
+  padding: 5px;
+  font-size: 14px;
+}
+.background .message-block .esc {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #B9B9B9;
+  background: #191818;
+  padding: 3px 5px;
+  border: 3px double #0D0C0A;
+}
+.background .message-block .esc span {
+  color: #872323;
+}
+.background .message-block .esc:hover {
+  cursor: default;
+}
+.visible {
+  display: block;
+}
+nav.nav-flex-container {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+nav.nav-flex-container .left {
+  font-family: 'Fira Sans Extra Condensed', sans-serif;
+  text-shadow: 0 0 3px white, 0 0 5px white;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 12px;
+  margin-left: 50px;
+}
+nav.nav-flex-container .left p {
+  display: inline-block;
+}
+nav.nav-flex-container .left div {
+  display: inline-block;
+  width: 23px;
+  height: 24px;
+  background: url(../img/sprites.png) no-repeat;
+  margin: 0 5px;
+}
+nav.nav-flex-container .left .weight {
+  background-position: 3px -2px;
+}
+nav.nav-flex-container .left .money {
+  background-position: -37px -2px;
+}
+nav.nav-flex-container .center {
+  font-size: 36px;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+nav.nav-flex-container .right {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  color: #847D63;
+  font-size: 24px;
+  display: flex;
+}
+nav.nav-flex-container .right p {
+  display: inline-block;
+  margin-right: 20px;
+}
+nav.nav-flex-container .right div.level {
+  width: 200px;
+  height: 51px;
+  background: url(../img/sprites.png) no-repeat;
+  background-position: -198px 0;
+  margin-right: 20px;
+}
+nav.nav-flex-container .right .close {
+  background: url(../img/sprites.png) no-repeat;
+  width: 48px;
+  height: 46px;
+  background-position: -78px -2px;
+  display: inline-block;
+}
+nav.nav-flex-container .right .close:hover {
+  background-position: -135px -2px;
+}
+main.main-flex-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 35px;
+  color: white;
+}
+main.main-flex-container .main-flex-block-right {
+  padding-right: 72px;
+}
+main.main-flex-container .main-flex-block {
+  font-family: 'Fira Sans Extra Condensed', sans-serif;
+}
+main.main-flex-container .main-flex-block nav {
+  display: flex;
+  justify-content: center;
+  padding: 0 40px;
+}
+main.main-flex-container .main-flex-block nav div {
+  background: url(../img/sprites.png) no-repeat;
+  width: 48px;
+  height: 46px;
+  margin: 0 8px;
+}
+main.main-flex-container .main-flex-block nav .engranaje {
+  background-position: 4px -57px;
+}
+main.main-flex-container .main-flex-block nav .engranaje:hover {
+  background-position: 4px -108px;
+}
+main.main-flex-container .main-flex-block nav .engranaje.active {
+  background-position: 4px -108px;
+}
+main.main-flex-container .main-flex-block nav .cartas {
+  background-position: -68px -57px;
+}
+main.main-flex-container .main-flex-block nav .cartas:hover {
+  background-position: -68px -108px;
+}
+main.main-flex-container .main-flex-block nav .cartas.active {
+  background-position: -68px -108px;
+}
+main.main-flex-container .main-flex-block nav .caballo {
+  background-position: -131px -57px;
+}
+main.main-flex-container .main-flex-block nav .caballo:hover {
+  background-position: -131px -108px;
+}
+main.main-flex-container .main-flex-block nav .caballo.active {
+  background-position: -131px -108px;
+}
+main.main-flex-container .main-flex-block nav .comida {
+  background-position: -199px -57px;
+}
+main.main-flex-container .main-flex-block nav .comida:hover {
+  background-position: -199px -108px;
+}
+main.main-flex-container .main-flex-block nav .comida.active {
+  background-position: -199px -108px;
+}
+main.main-flex-container .main-flex-block nav .armas {
+  background-position: -266px -59px;
+}
+main.main-flex-container .main-flex-block nav .armas:hover {
+  background-position: -268px -106px;
+}
+main.main-flex-container .main-flex-block nav .armas.active {
+  background-position: -268px -106px;
+}
+main.main-flex-container .main-flex-block .equipo-block {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 440px;
+}
+main.main-flex-container .main-flex-block .equipo-block .first {
+  margin-right: 3%;
+  width: 43%;
+}
+main.main-flex-container .main-flex-block .equipo-block .second {
+  margin-right: 0;
+  width: 54%;
+}
+main.main-flex-container .main-flex-block .equipo-block .third {
+  width: 0;
+  display: none;
+}
+main.main-flex-container .main-flex-block .equipo-block .items {
+  display: flex;
+}
+main.main-flex-container .main-flex-block .equipo-block .items .item {
+  display: block;
+  width: 48px;
+  height: 48px;
+  border: 3px double transparent;
+}
+main.main-flex-container .main-flex-block .equipo-block .items .item .icon {
+  width: 100%;
+  height: 100%;
+}
+main.main-flex-container .main-flex-block .equipo-block .items .item .carta {
+  background: url(../img/icons/carta3.png) no-repeat;
+  background-position: 1px -49px;
+}
+main.main-flex-container .main-flex-block .equipo-block .items .item .carta:hover {
+  background-position: 1px 1px;
+}
+main.main-flex-container .main-flex-block .equipo-block > div > p {
+  text-align: center;
+  margin: 5px 0;
+}
+main.main-flex-container .main-flex-block .avatar-block {
+  display: flex;
+  justify-content: space-between;
+}
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: flex-start;
+}
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .bolsillo,
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .ropa {
+  width: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  margin-bottom: 20px;
+}
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .bolsillo-armas .item-block,
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .ropa-ropa .item-block {
+  width: 70px;
+  color: #463F2D;
+  font-size: 11.5px;
+  text-align: center;
+  margin-top: 15px;
+}
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .bolsillo-armas .item-block .item,
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .ropa-ropa .item-block .item {
+  margin: 0 auto;
+  width: 46px;
+  height: 70px;
+  border: 3px double transparent;
+}
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .bolsillo-armas .item-block .item .icon,
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .ropa-ropa .item-block .item .icon {
+  width: 100%;
+  height: 100%;
+}
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .bolsillo-armas .item-block .steel,
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .ropa-ropa .item-block .steel {
+  background: linear-gradient(to top, #14110a 0%, transparent 100%);
+  background-origin: border-box;
+}
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .bolsillo-armas .item-block .steel .butaf-steel,
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .ropa-ropa .item-block .steel .butaf-steel {
+  background: url(../img/icons/butaf_steel.png) no-repeat;
+  background-position: 0 1px;
+}
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .bolsillo-armas .item-block .steel .butaf-steel:hover,
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .ropa-ropa .item-block .steel .butaf-steel:hover {
+  background-position: 0 -85px;
+}
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .bolsillo-armas .item-block .silver,
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .ropa-ropa .item-block .silver {
+  background: url(../img/icons/armas.png) no-repeat;
+  background-position: -97px 0;
+  background-size: 500%;
+}
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .bolsillo-armas .item-block .bala,
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .ropa-ropa .item-block .bala {
+  background: url(../img/icons/armas.png) no-repeat;
+  background-position: -271px -48px;
+  background-size: 800%;
+}
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .bolsillo-armas .item-block .escopeta,
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .ropa-ropa .item-block .escopeta {
+  background: url(../img/icons/armas.png) no-repeat;
+  background-position: -271px 7px;
+  background-size: 800%;
+}
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .bolsillo-armas .item-block p,
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .ropa-ropa .item-block p {
+  margin-top: 5px;
+}
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .bolsillo-armas .item-block .ropa-items,
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .ropa-ropa .item-block .ropa-items {
+  background: linear-gradient(to top, #091c09 0%, transparent 100%);
+  background-origin: border-box;
+}
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .bolsillo-armas .item-block .ropa-items .camisa,
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .ropa-ropa .item-block .ropa-items .camisa {
+  background: url(../img/icons/camisa.png) no-repeat;
+  background-position: 0 -7px;
+}
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .bolsillo-armas .item-block .ropa-items .camisa:hover,
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .ropa-ropa .item-block .ropa-items .camisa:hover {
+  background-position: 0 -102px;
+}
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .bolsillo-armas .item-block .ropa-items .pantalones,
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .ropa-ropa .item-block .ropa-items .pantalones {
+  background: url(../img/icons/pantalones.png) no-repeat;
+  background-position: 0 -2px;
+}
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .bolsillo-armas .item-block .ropa-items .pantalones:hover,
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .ropa-ropa .item-block .ropa-items .pantalones:hover {
+  background-position: 0 -90px;
+}
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .bolsillo-armas .item-block .ropa-items .zapatos,
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .ropa-ropa .item-block .ropa-items .zapatos {
+  background: url(../img/icons/zapatos.png) no-repeat;
+  background-position: 0 0;
+}
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .bolsillo-armas .item-block .ropa-items .zapatos:hover,
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .ropa-ropa .item-block .ropa-items .zapatos:hover {
+  background-position: 0 -60px;
+}
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .bolsillo-armas .item-block .ropa-items .guantes,
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .ropa-ropa .item-block .ropa-items .guantes {
+  background: url(../img/icons/guantes.png) no-repeat;
+  background-position: 0 -2px;
+}
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .bolsillo-armas .item-block .ropa-items .guantes:hover,
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .ropa-ropa .item-block .ropa-items .guantes:hover {
+  background-position: 0 -78px;
+}
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .bolsillo-comida .item-block,
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .bolsillo-bolsillo .item-block {
+  width: 70px;
+  margin-top: 15px;
+}
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .bolsillo-comida .item-block .item,
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .bolsillo-bolsillo .item-block .item {
+  margin: 0 auto;
+  width: 46px;
+  height: 46px;
+  border: 3px double transparent;
+}
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .bolsillo-comida .item-block .item .icon,
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .bolsillo-bolsillo .item-block .item .icon {
+  width: 100%;
+  height: 100%;
+}
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .bolsillo-comida .item-block .item .gafas,
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .bolsillo-bolsillo .item-block .item .gafas {
+  background: url(../img/icons/gafas.png) no-repeat;
+  background-position: 0 5px;
+}
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .bolsillo-comida .item-block .item .gafas:hover,
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .bolsillo-bolsillo .item-block .item .gafas:hover {
+  background-position: 0 -43px;
+}
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .bolsillo-comida .item-block .comida,
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .bolsillo-bolsillo .item-block .comida {
+  background: url(../img/icons/armas.png) no-repeat;
+  background-position: -205px -45px;
+  background-size: 768%;
+}
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .bolsillo-comida .item-block .bombas,
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .bolsillo-bolsillo .item-block .bombas {
+  background: url(../img/icons/armas.png) no-repeat;
+  background-position: -207px -10px;
+  background-size: 768%;
+}
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .bolsillo-comida .item-block .saco,
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .bolsillo-bolsillo .item-block .saco {
+  background: url(../img/icons/armas.png) no-repeat;
+  background-position: -55px -10px;
+}
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .bolsillo-titles {
+  color: #463F2D;
+  font-size: 11.5px;
+  text-align: center;
+  margin-top: -15px;
+  margin-bottom: 20px;
+}
+main.main-flex-container .main-flex-block .avatar-block .avatar-column-block .bolsillo-bolsillo p {
+  width: 100%;
+  color: #463F2D;
+  font-size: 11.5px;
+  text-align: center;
+  margin-top: 5px;
+}
+main.main-flex-container .main-flex-block .avatar-block img.avatar-img {
+  display: block;
+  width: 220px;
+  height: 568px;
+  margin: 0 50px;
+}
+main.main-flex-container .double-border {
+  position: relative;
+  border: 1px solid transparent;
+  border-bottom: none;
+  padding: 0 2px;
+  -moz-border-image: -moz-linear-gradient(top, #1E1913 0%, transparent 180px);
+  -webkit-border-image: -webkit-linear-gradient(top, #1E1913 0%, transparent 180px);
+  border-image: linear-gradient(to bottom, #1E1913 0%, transparent 180px);
+  border-image-slice: 1;
+}
+main.main-flex-container .double-border:before {
+  content: '';
+  position: absolute;
+  left: -3px;
+  top: -3px;
+  right: -3px;
+  bottom: -3px;
+  z-index: -1;
+  border: 1px solid transparent;
+  border-bottom: none;
+  -moz-border-image: -moz-linear-gradient(top, #1E1913 0%, transparent 180px);
+  -webkit-border-image: -webkit-linear-gradient(top, #1E1913 0%, transparent 180px);
+  border-image: linear-gradient(to bottom, #1E1913 0%, transparent 180px);
+  border-image-slice: 1;
+}
+main.main-flex-container .double-border:after {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  width: 5px;
+  height: 4px;
+  border-right: 1px solid #1e1913;
+  border-bottom: 1px solid #1e1913;
+  border-left: 1px solid #090909;
+  border-top: 1px solid #090909;
+}
+main.main-flex-container .double-border .right-corner {
+  content: "";
+  position: absolute;
+  right: -1px;
+  top: -1px;
+  width: 5px;
+  height: 4px;
+  border-left: 1px solid #1e1913;
+  border-bottom: 1px solid #1e1913;
+  border-right: 1px solid #090909;
+  border-top: 1px solid #090909;
+}
+main.main-flex-container .double-border-active {
+  -moz-border-image: -moz-linear-gradient(top, #a5a18f 0%, transparent 180px);
+  -webkit-border-image: -webkit-linear-gradient(top, #a5a18f 0%, transparent 180px);
+  border-image: linear-gradient(to bottom, #a5a18f 0%, transparent 180px);
+  border-image-slice: 1;
+}
+main.main-flex-container .double-border-active:before {
+  -moz-border-image: -moz-linear-gradient(top, #a5a18f 0%, transparent 180px);
+  -webkit-border-image: -webkit-linear-gradient(top, #a5a18f 0%, transparent 180px);
+  border-image: linear-gradient(to bottom, #a5a18f 0%, transparent 180px);
+  border-image-slice: 1;
+}
+main.main-flex-container .double-border-active:after {
+  border-right: 1px solid #a5a18f;
+  border-bottom: 1px solid #a5a18f;
+}
+main.main-flex-container .double-border-active .right-corner {
+  border-left: 1px solid #a5a18f;
+  border-bottom: 1px solid #a5a18f;
+}
+/*# sourceMappingURL=inventarioStyle.css.map */

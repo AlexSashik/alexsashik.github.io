@@ -13,23 +13,34 @@
     <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/touch-icon-iphone-retina.png">
     <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/touch-icon-ipad-retina.png">
 
-    <link rel="stylesheet" href="reset.min.css" type = "text/css">
-    <link rel="stylesheet" href="style.css?1.0" type = "text/css">
+    <link rel="stylesheet" href="styles/reset.min.css" type = "text/css">
+    <link rel="stylesheet" href="styles/style.css?2.0" type = "text/css">
 
 </head>
 
 <body>
     <main>
-        <p class="title">Mira a esta chica tan maravillosa, guapa y preciosa</p>
+        <p class="title">¡Qué chica cariñosa, inteligente, guapa y preciosa!</p>
         <img class="arrow" src="img/DownGreen.png" alt="arrow">
 
-        <img class="photo" src="img/linda.jpg" alt="linda">
+        <img class="photo" src="img/linda2.jpg" alt="linda">
 
-        <p class="title">Me encantaría darle un besito <img class="emoji" src="img/beso.png" alt="beso"> y felicitarla</p>
-        <p class="title big">¡¡¡FELIZ DÍA DE LA MUJER!!!</p>
+        <p class="title">Me encantaría abrazarla <img class="emoji" src="img/hug.png" alt="hug">,
+            darle un besito <img class="emoji" src="img/beso.png" alt="beso"> y felicitarla</p>
+        <p class="title big">¡¡¡FELIZ CUMPLEAÑOS!!!</p>
 
-        <div class="message" id="message"></div>
+        <div class="message" id="message">
+        Definitivamente tú mereces algo especial y por eso he recolectado el juego de instrumentos de los
+        brujos. ¡Utilizándolo puedes obtener habilidades básicas del brujo, sin mutaciones! Para poder encontrarlo
+        te he dejado una pista en el diario pero... Alguien lo robó. Solo he logrado interceptar una carta. Creo que con su ayuda
+        podrás dar con la huella del ladrón. Yo la dejo esta carta aquí, en tu <u>inventario</u>. Espero que finalmente consigas
+        obtener el diario y encontrar el tesoro escondido.
+		<p class="consejo">
+			Consejo: para enterarse de todo mejor, te recomiendo encender pantalla completa pulsando F11
+		</p>
+		</div>
 
+		<!--
         <div class="clock" id="clock">
             <span class="numbers" id="days">00</span> :
             <span class="numbers" id="hours">00</span> :
@@ -38,9 +49,18 @@
         </div>
 
         <p class="end" id="end">¡Y ahora a comer! ¡Que aproveche!</p>
+		-->
     </main>
 
-    <script src="jquery.min.js"></script>
-	<script defer src="script.min.js?1.1"></script>
+    <script src="js/jquery.min.js"></script>
+	<script>
+		window.addEventListener('keyup', (event) => {
+			if (event.keyCode === 73) {
+				window.location.href = './inventario.html'; 
+			}
+		});
+	</script>
+	
+	<!--<script defer src="script.min.js?1.1"></script>-->
 </body>
 </html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Para mi linda gatita</title>
+
+    <meta name = "viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/favicon/touch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/touch-icon-ipad-retina.png">
+
+    <link rel="stylesheet" href="styles/reset.min.css" type = "text/css">
+    <link rel="stylesheet" href="styles/inventarioStyle.css?2.0" type = "text/css">
+
+</head>
+
+<body style="visibility: hidden"
+      onload="setTimeout ('document.body.style.visibility = \'visible\'', 0)">
+
+    <div id="background" class="background">
+        <div class="message-block">
+            <p class="title">Письмо к К.</p>
+            <div class="img">
+                <div class="left-line"></div>
+                <img src="img/icons/carta.png" alt="">
+                <div class="right-line"></div>
+            </div>
+            <p class="text">
+                Морда ты моя родная! Пишу я тебе, и от возбуждения пера в лапе удержать не в силах!
+                Значица, читай: слыхал я, что у хозяйки нашей праздник какой, а все знают, что
+                где будут веселиться, там можно и поживиться. И вот судьба смилостивилась, подкинув накануне
+                прямо мне в лапы дневник с какими-то записями. Пузом чую, что там есть и для нас с тобой
+                гостинцы. Вот только неразумею ничего в этих шарадах, поэтому и пишу к тебе - ты ж у нас
+                ученый. Надеюсь, ждать себя не заставишь. Твой земляк, Т.
+                <br><br>
+                P.S. Дневник я пока схоронил в ящике с машиной, что на тканях латки ставит - жуткое место. И не вздумай
+                туда соваться без меня - открыть-то ты его все равно не сможешь.
+            </p>
+            <div class="esc" id="carta-esc">[ESC] <span>Выход</span></div>
+        </div>
+    </div>
+
+    <nav class="nav-flex-container">
+        <div class="nav-flex-block left">
+            <p>12 / 26</p>
+            <div class="weight"></div>
+            <p>1993</p>
+            <div class="money"></div>
+        </div>
+        <div class="nav-flex-block center">РЮКЗАК</div>
+        <div class="nav-flex-block right">
+            <p>УРОВЕНЬ</p>
+            <div class="level"></div>
+            <div id="close" class="close"></div>
+        </div>
+    </nav>
+
+    <main class="main-flex-container">
+        <div class="main-flex-block">
+            <nav id="icons-nav">
+                <div id="engranaje" class="engranaje"></div>
+                <div id="cartas" class="active cartas"></div>
+                <div id="caballo" class="caballo"></div>
+                <div id="comida" class="comida"></div>
+                <div id="armas" class="armas"></div>
+            </nav>
+            <div id="equipo-block" class="equipo-block">
+                <div class="first double-border">
+                    <div class="right-corner"></div>
+                    <p>Вещи для заданий</p>
+                    <div class="items">
+                        <div class="item">
+                            <div class="carta icon"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="second double-border">
+                    <div class="right-corner"></div>
+                    <p>Прочее</p>
+                </div>
+                <div class="third double-border">
+                    <div class="right-corner"></div>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <div class="main-flex-block main-flex-block-right">
+           <div class="avatar-block">
+               <div class="avatar-column-block">
+                   <div class="bolsillo bolsillo-armas double-border">
+                       <div class="right-corner"></div>
+                       <div class="item-block">
+                           <div class="item steel">
+                               <div class="butaf-steel icon"></div>
+                           </div>
+                           <p>Стальной&nbsp;меч</p>
+                       </div>
+                       <div class="item-block">
+                           <div class="item silver"></div>
+                           <p>Серебрянный&nbsp;меч</p>
+                       </div>
+                       <div class="item-block">
+                           <div class="item bala"></div>
+                           <p>Болты</p>
+                       </div>
+                       <div class="item-block">
+                           <div class="item escopeta"></div>
+                           <p>Оружие&nbsp;дальнего боя</p>
+                       </div>
+                   </div>
+
+                   <div class="bolsillo bolsillo-comida double-border">
+                       <div class="right-corner"></div>
+                       <div class="item-block">
+                           <div class="item comida"></div>
+                       </div>
+                       <div class="item-block">
+                           <div class="item comida"></div>
+                       </div>
+                       <div class="item-block">
+                           <div class="item comida"></div>
+                       </div>
+                       <div class="item-block">
+                           <div class="item comida"></div>
+                       </div>
+                   </div>
+
+                   <p class="bolsillo-titles">Еда и эликсиры</p>
+
+                   <div class="bolsillo bolsillo-bolsillo double-border">
+                       <div class="right-corner"></div>
+                       <div class="item-block">
+                           <div class="item bombas"></div>
+                       </div>
+                       <div class="item-block">
+                           <div class="item bombas"></div>
+                       </div>
+                       <p>Бомбы</p>
+                       <div class="item-block">
+                           <div class="item gafas">
+                               <div class="gafas icon"></div>
+                           </div>
+                       </div>
+                       <div class="item-block">
+                           <div class="item saco"></div>
+                       </div>
+                       <p>Карманы</p>
+                   </div>
+               </div>
+
+               <img class="avatar-img" src="img/avatar.png" alt="avatar">
+
+               <div class="avatar-column-block">
+                   <div class="ropa ropa-ropa double-border">
+                       <div class="right-corner"></div>
+                       <div class="item-block">
+                           <div class="item ropa-items">
+                               <div class="camisa icon"></div>
+                           </div>
+                           Корпус
+                       </div>
+                       <div class="item-block">
+                           <div class="item ropa-items">
+                               <div class="guantes icon"></div>
+                           </div>
+                           Руки
+                       </div>
+                       <div class="item-block">
+                           <div class="item ropa-items">
+                               <div class="pantalones icon"></div>
+                           </div>
+                           Ноги
+                       </div>
+                       <div class="item-block">
+                           <div class="item ropa-items">
+                               <div class="zapatos icon"></div>
+                           </div>
+                           Обувь
+                       </div>
+                   </div>
+               </div>
+           </div>
+        </div>
+    </main>
+
+    <script src="js/jquery.min.js"></script>
+	<script>
+		window.addEventListener('keyup', (event) => {
+			if (event.keyCode === 73) {
+				window.location.href = './index.html'; 
+			}
+		});
+	</script>
+	<script defer src="js/inventario.js?2.0"></script>
+</body>
+</html>
