@@ -60,6 +60,21 @@ body {
     zoom: 0.8;
   }
 }
+@keyframes snow {
+  0% {
+    background-position: 0 0, 0 0, 0 0;
+  }
+  100% {
+    background-position: 500px 1000px, 400px 400px, 300px 300px;
+  }
+}
+#snow-container {
+  background-image: url(../img/snowflake.png), url(../img/snowflake3.png), url(../img/snowflake2.png);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  animation: snow 20s linear infinite;
+}
 .background {
   z-index: 999;
   display: none;
