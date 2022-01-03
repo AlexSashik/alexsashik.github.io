@@ -1,0 +1,278 @@
+body {
+  background: url(../img/background.jpg) no-repeat center top fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-weight: 400;
+  font-family: cursive;
+}
+.animate {
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.animate:hover {
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.hidden {
+  display: none;
+}
+h1,
+.h2 {
+  padding: 20px;
+  text-align: center;
+  color: gold;
+  font-size: 50px;
+  text-shadow: 4px 2px black;
+}
+h2 {
+  padding-bottom: 0;
+}
+.rank {
+  display: none;
+  position: absolute;
+  left: 20px;
+  top: 10px;
+}
+.rank .levelImg {
+  margin: 0 auto;
+  background: url(../img/game21/kittyLevels.png) no-repeat;
+  background-position-x: 0;
+  background-position-y: 0;
+  width: 65px;
+  height: 65px;
+}
+.rank p {
+  text-align: center;
+  color: gold;
+  text-shadow: 2px 1px black;
+  font-size: 25px;
+}
+.xp {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 30px;
+  color: gold;
+  text-shadow: 2px 1px black;
+}
+div.main {
+  position: relative;
+}
+div.main .flex-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+div.main .flex-container .flex-block {
+  background-color: aliceblue;
+  text-align: center;
+  margin: 15px 21px;
+  padding: 10px;
+  border-radius: 5px;
+  position: relative;
+}
+div.main .flex-container .flex-block img {
+  width: 300px;
+  border-radius: 100%;
+}
+div.main .flex-container .flex-block img.check {
+  position: absolute;
+  left: 25px;
+  z-index: 5;
+  display: none;
+}
+div.main .flex-container .flex-block-active:hover {
+  box-shadow: 0 0 15px white;
+  cursor: pointer;
+}
+div.final-block {
+  display: none;
+}
+div.final-block .bonus {
+  text-align: center;
+  margin: 30px;
+}
+div.final-block .bonus img {
+  width: 350px;
+  border-radius: 20px;
+  border: 5px solid white;
+}
+div.final-block .bonus p {
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 40px;
+  color: #00ff1f;
+  text-shadow: 2px 1px black;
+}
+@keyframes snow {
+  0% {
+    background-position: 0 0, 0 0, 0 0;
+  }
+  100% {
+    background-position: 500px 1000px, 400px 400px, 300px 300px;
+  }
+}
+div.final-block #snow-container {
+  background-image: url(../img/snowflake.png), url(../img/snowflake3.png), url(../img/snowflake2.png);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  animation: snow 20s linear infinite;
+}
+div.quiz {
+  position: relative;
+}
+div.quiz .back {
+  position: absolute;
+  display: inline-block;
+  padding: 12px 25px;
+  background: linear-gradient(180deg, #bf6a12, #742600);
+  border-radius: 7px;
+  margin: 20px 0 -14px 20px;
+  color: #F7F7F7;
+  font-size: 25px;
+}
+div.quiz .back:hover {
+  box-shadow: 0 0 10px sandybrown;
+  cursor: pointer;
+}
+div.quiz .content {
+  display: flex;
+  margin-bottom: 20px;
+}
+div.quiz .content .months {
+  transform: scale(0.75, 0.75);
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 600px;
+}
+div.quiz .content .months .month {
+  background: url(../img/game21/meses-min.png) no-repeat;
+  width: 168px;
+  height: 172px;
+  display: inline-block;
+  background-position-y: 0;
+  margin: 10px 0;
+}
+div.quiz .content .months .month:hover {
+  background-position-y: -191px;
+  cursor: pointer;
+}
+div.quiz .content .months .noHover:hover {
+  background-position-y: 0;
+  cursor: default;
+}
+div.quiz .content .months .month.success {
+  background-position-y: -379px;
+}
+div.quiz .content .months .month.wrong {
+  background-position-y: -567px;
+}
+div.quiz .content .months .jan {
+  background-position-x: -30px;
+}
+div.quiz .content .months .feb {
+  background-position-x: -228px;
+}
+div.quiz .content .months .mar {
+  background-position-x: -426px;
+}
+div.quiz .content .months .apr {
+  background-position-x: -625px;
+}
+div.quiz .content .months .may {
+  background-position-x: -824px;
+}
+div.quiz .content .months .jun {
+  background-position-x: -1023px;
+}
+div.quiz .content .months .jul {
+  background-position-x: -1219px;
+}
+div.quiz .content .months .aug {
+  background-position-x: -1420px;
+}
+div.quiz .content .months .sep {
+  background-position-x: -1619px;
+}
+div.quiz .content .months .oct {
+  background-position-x: -1818px;
+}
+div.quiz .content .months .nov {
+  background-position-x: -2017px;
+}
+div.quiz .content .months .dec {
+  background-position-x: -2216px;
+}
+div.quiz .content .months .description {
+  width: 350px;
+  text-align: center;
+  font-size: 30px;
+  color: #FFD700;
+  text-shadow: 3px 2px black;
+}
+div.quiz .content .img {
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+  display: flex;
+}
+div.quiz .content .img img {
+  width: 350px;
+  margin-left: 235px;
+  align-self: center;
+  border-radius: 20px;
+  border: 5px solid white;
+}
+div.quiz .content .img .next {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 12px 25px;
+  background: linear-gradient(180deg, #bf6a12, #742600);
+  border-radius: 27px;
+  margin: 20px 0 -14px 20px;
+  color: #F7F7F7;
+  font-size: 25px;
+}
+div.quiz .content .img .next:hover {
+  box-shadow: 0 0 10px sandybrown;
+  cursor: pointer;
+}
+div.quiz .content .img .tiama {
+  display: none;
+  position: absolute;
+  right: 50px;
+  top: 0;
+}
+div.quiz .content .img .tiama img {
+  width: 150px;
+  border: 3px solid white;
+}
+div.quiz .extra-photos {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 0 100px;
+}
+div.quiz .extra-photos img {
+  display: block;
+  width: 350px;
+  margin: 20px;
+  border-radius: 30px;
+  border: 5px solid white;
+}
+/*# sourceMappingURL=game21.css.map */

@@ -1,0 +1,293 @@
+body {
+  background: url(../img/background.jpg) no-repeat center top fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-weight: 400;
+  font-family: cursive;
+}
+
+.animate {
+  -ms-transition: all.4s ease;
+  -o-transition: all.4s ease;
+  -moz-transition: all.4s ease;
+  -webkit-transition: all.4s ease;
+  transition: all.4s ease;
+  &:hover {
+    -ms-transition: all.4s ease;
+    -o-transition: all.4s ease;
+    -moz-transition: all.4s ease;
+    -webkit-transition: all.4s ease;
+    transition: all.4s ease;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+h1, .h2 {
+  padding: 20px;
+  text-align: center;
+  color: gold;
+  font-size: 50px;
+  text-shadow: 4px 2px black;
+}
+
+h2 {
+  padding-bottom: 0;
+}
+
+.rank {
+  display: none;
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  .levelImg {
+    margin: 0 auto;
+    background: url(../img/game21/kittyLevels.png) no-repeat;
+    background-position-x: 0;
+    background-position-y: 0;
+    width: 65px;
+    height: 65px;
+  }
+  p {
+    text-align: center;
+    color: gold;
+    text-shadow: 2px 1px black;
+    font-size: 25px;
+  }
+}
+
+.xp {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 30px;
+  color: gold;
+  text-shadow: 2px 1px black;
+}
+
+div.main {
+  position: relative;
+  .flex-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    .flex-block {
+      background-color: aliceblue;
+      text-align: center;
+      margin: 15px 21px;
+      padding: 10px;
+      border-radius: 5px;
+      position: relative;
+      img {
+        width: 300px;
+        border-radius: 100%;
+      }
+      img.check {
+        position: absolute;
+        left: 25px;
+        z-index: 5;
+        display: none;
+      }
+    }
+    .flex-block-active {
+      &:hover {
+        box-shadow: 0 0 15px white;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+div.final-block {
+  display: none;
+  .bonus {
+    text-align: center;
+    margin: 30px;
+    img {
+      width: 350px;
+      border-radius: 20px;
+      border: 5px solid white;
+    }
+    p {
+      margin-bottom: 20px;
+      font-weight: bold;
+      font-size: 40px;
+      color: #00ff1f;
+      text-shadow: 2px 1px black;
+    }
+  }
+  @keyframes snow {
+    0% {background-position: 0 0, 0 0, 0 0;}
+    100% {background-position: 500px 1000px, 400px 400px, 300px 300px;}
+  }
+
+  #snow-container {
+    background-image: url(../img/snowflake.png), url(../img/snowflake3.png), url(../img/snowflake2.png);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    animation: snow 20s linear infinite;
+  }
+}
+
+div.quiz {
+  position: relative;
+
+  .back {
+    position: absolute;
+    display: inline-block;
+    padding: 12px 25px;
+    background: linear-gradient(180deg, #bf6a12, #742600);
+    border-radius: 7px;
+    margin: 20px 0 -14px 20px;
+    color: #F7F7F7;
+    font-size: 25px;
+    &:hover {
+      box-shadow: 0 0 10px sandybrown;
+      cursor: pointer;
+    }
+  }
+
+  .content {
+    display: flex;
+    margin-bottom: 20px;
+    .months{
+      transform: scale(0.75, 0.75);
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      width: 600px;
+      .month {
+        background: url(../img/game21/meses-min.png) no-repeat;
+        width: 168px;
+        height: 172px;
+        display: inline-block;
+        background-position-y: 0;
+        margin: 10px 0;
+        &:hover {
+          background-position-y: -191px;
+          cursor: pointer;
+        }
+      }
+      .noHover {
+        &:hover {
+          background-position-y: 0;
+          cursor: default;
+        }
+      }
+      .month.success {
+        background-position-y: -379px;
+      }
+      .month.wrong {
+        background-position-y: -567px;
+      }
+
+      .jan {
+        background-position-x: -30px;
+      }
+      .feb {
+        background-position-x: -228px;
+      }
+      .mar {
+        background-position-x: -426px;
+      }
+      .apr {
+        background-position-x: -625px;
+      }
+      .may {
+        background-position-x: -824px;
+      }
+      .jun {
+        background-position-x: -1023px;
+      }
+      .jul {
+        background-position-x: -1219px;
+      }
+      .aug {
+        background-position-x: -1420px;
+      }
+      .sep {
+        background-position-x: -1619px;
+      }
+      .oct {
+        background-position-x: -1818px;
+      }
+      .nov {
+        background-position-x: -2017px;
+      }
+      .dec {
+        background-position-x: -2216px;
+      }
+
+      .description {
+        width: 350px;
+        text-align: center;
+        font-size: 30px;
+        color: #FFD700;
+        text-shadow: 3px 2px black;
+      }
+    }
+
+    .img {
+      width: 100%;
+      margin-top: 20px;
+      position: relative;
+      display: flex;
+      img {
+        width: 350px;
+        margin-left: 235px;
+        align-self: center;
+        border-radius: 20px;
+        border: 5px solid white;
+      }
+      .next {
+        display: none;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 12px 25px;
+        background: linear-gradient(
+                180deg, #bf6a12, #742600);
+        border-radius: 27px;
+        margin: 20px 0 -14px 20px;
+        color: #F7F7F7;
+        font-size: 25px;
+        &:hover {
+          box-shadow: 0 0 10px sandybrown;
+          cursor: pointer;
+        }
+      }
+      .tiama {
+        display: none;
+        position: absolute;
+        right: 50px;
+        top: 0;
+        img {
+          width: 150px;
+          border: 3px solid white;
+        }
+      }
+    }
+  }
+
+  .extra-photos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 100px;
+    img {
+      display: block;
+      width: 350px;
+      margin: 20px;
+      border-radius: 30px;
+      border: 5px solid white;
+    }
+  }
+}

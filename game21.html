@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Para mi linda gatita</title>
+
+    <meta name = "viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/favicon/touch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/touch-icon-ipad-retina.png">
+
+    <link rel="stylesheet" href="styles/reset.min.css" type = "text/css">
+    <link rel="stylesheet" href="styles/game21.css" type = "text/css">
+</head>
+
+<body style="visibility: hidden"
+      onload="setTimeout ('document.body.style.visibility = \'visible\'', 0)">
+
+    <div class="rank">
+        <div id="levelImg" class="levelImg"></div>
+        <p id="rank"> Кися</p>
+    </div>
+
+    <div id="main" class="main">
+
+        <h1>Наш 2021 год</h1>
+        <div class="xp">
+            <p>Тямапоинты: <span id="mainxp">0</span></p>
+        </div>
+
+        <div class="flex-container">
+            <div id="loveseason" class="flex-block flex-block-active animate">
+                <img src="img/game21/loveseason.jpg" alt="Сезон любви">
+                <img id="loveCheck" class="check" src="img/game21/check.png" alt="Check">
+                <p>Сезон любви</p>
+            </div>
+            <div id="chillseason" class="flex-block flex-block-active animate">
+                <img src="img/game21/restseason.jpg" alt="Сезон отдыха">
+                <img id="chillCheck" class="check" src="img/game21/check.png" alt="Check">
+                <p>Сезон отдыха</p>
+            </div>
+            <div id="workseason" class="flex-block flex-block-active animate">
+                <img src="img/game21/workseason.jpg" alt="Сезон работы">
+                <img id="workCheck" class="check" src="img/game21/check.png" alt="Check">
+                <p>Сезон работы</p>
+            </div>
+        </div>
+
+        <div class="final-block">
+            <div class="bonus">
+                <p id="filnal-text">С НОВЫМ ГОДОМ!!!</p>
+                <img src="img/game21/tiama-bonus.jpg" alt="">
+            </div>
+            <div id="snow-container"></div>
+        </div>
+
+    </div>
+
+    <div id="quiz" class="quiz hidden">
+<!--        <div id="back" class="back animate">❮ Выход</div>-->
+        <h2 class="h2">Сезон любви</h2>
+        <div class="xp">
+            <p>Тямапоинты: <span id="xp">0</span></p>
+        </div>
+
+        <div class="content">
+            <div class="months">
+                <div id="first-month" class="month"></div>
+                <div id="second-month" class="month"></div>
+                <div id="third-month" class="month"></div>
+                <div id="fourth-month" class="month"></div>
+                <p id="description" class="description">Текст</p>
+            </div>
+
+            <div id="main_img" class="img">
+                <div id="next_photo" class="next animate">Следующий эпизод ❯</div>
+                <div id="tiama" class="tiama">
+                    <img src="img/game21/contento-min.jpg" alt="Bonus">
+                </div>
+            </div>
+        </div>
+
+        <div class="extra-photos"></div>
+
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/sweetalert.js"></script>
+	<script defer src="js/game21.js?1.0"></script>
+</body>
+</html>
