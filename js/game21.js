@@ -97,7 +97,7 @@ let allImages = {
             'img/game21/sep/12/3-min.jpg',
             'img/game21/sep/12/4-min.jpg',
             'img/game21/sep/12/5-min.jpg',
-            'img/game21/sep/12/6-min.jpg',
+            'img/game21/sep/12/6-min.JPG',
         ]],
         ['img/game21/sep/14/2-min.jpg', '5 и 14 сентября: Тедди обыкновенный и венецианский ', 'sep', [
             'img/game21/sep/14/1-min.jpg',
@@ -416,4 +416,3 @@ function shuffle(array) {
 
     return array;
 }
-
